@@ -1,0 +1,253 @@
+/* Layout: one long descent. A drawn river runs down the left; stops sit beside it.
+   The land colour shifts from snow to valley to clay to salt as the water runs out. */
+:root {
+  --lapis: #12294d;        /* Safavid tile blue, hero and closing ground */
+  --lapis-2: #1b3a68;
+  --turq: #2fb3b0;         /* tile turquoise, accents on dark */
+  --water: #2a86b3;        /* the river */
+  --water-deep: #1c5f8a;
+  --saffron: #e2a72a;      /* tile yellow, the one warm accent */
+  --clay: #a8683c;         /* brick and dry bed */
+  --ink: #15212c;
+  --ink-soft: #3c4a55;
+  --snow: #e7eff3;
+  --valley: #dfe8d8;
+  --plain: #ece2cb;
+  --parched: #e3cfa6;
+  --salt: #f1ece1;
+
+  --display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --nastaliq: "Noto Nastaliq Urdu", "Iranian Sans", Tahoma, serif;
+
+  --riverw: clamp(84px, 40vw, 520px);
+  --gutter: max(18px, env(safe-area-inset-left, 0px));
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--lapis);
+  color: var(--ink);
+  font: 400 17px/1.62 var(--body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1, h2, p, dl, dd, ol { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--saffron); outline-offset: 3px; }
+
+.eyebrow {
+  font: 500 12px/1.2 var(--mono);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  color: #eef4f7;
+  background:
+    radial-gradient(120% 90% at 80% 0%, rgba(47, 179, 176, 0.22), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.06' stroke-width='1'%3E%3Cpath d='M36 6 44.8 27.2 66 36 44.8 44.8 36 66 27.2 44.8 6 36 27.2 27.2z'/%3E%3Cpath d='M14.8 14.8 36 23.6 57.2 14.8 48.4 36 57.2 57.2 36 48.4 14.8 57.2 23.6 36z'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, var(--lapis) 0%, var(--lapis-2) 100%);
+  padding: clamp(56px, 10vh, 120px) var(--gutter) clamp(72px, 12vh, 140px);
+}
+.hero::after { /* snow line where the river begins */
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: -1px; height: 70px;
+  background: var(--snow);
+  clip-path: polygon(0 100%, 0 62%, 9% 30%, 16% 55%, 24% 12%, 33% 58%, 41% 34%, 52% 70%, 63% 26%, 71% 52%, 80% 8%, 90% 48%, 100% 22%, 100% 100%);
+}
+.hero-inner { max-width: 1040px; margin: 0 auto; display: grid; gap: 22px; }
+.hero .eyebrow { color: var(--turq); }
+.fa-title {
+  font: 500 clamp(54px, 11vw, 132px)/1.9 var(--nastaliq);
+  color: var(--turq);
+  text-align: left;
+  margin-block: -0.35em -0.3em;
+}
+.hero h1 {
+  font: 400 clamp(40px, 6.6vw, 84px)/1.02 var(--display);
+  letter-spacing: -0.01em;
+  max-width: 14ch;
+  text-wrap: balance;
+}
+.lede { max-width: 56ch; font-size: clamp(17px, 1.5vw, 20px); color: #cfdbe4; }
+.hero-facts { display: flex; flex-wrap: wrap; gap: 14px 44px; margin-top: 6px; }
+.hero-facts dt { font: 500 11px/1.2 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: #9db3c4; }
+.hero-facts dd { font: 400 clamp(24px, 2.6vw, 32px)/1.2 var(--display); }
+.start {
+  justify-self: start;
+  margin-top: 10px;
+  padding: 12px 20px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .2s, color .2s;
+}
+.start:hover { background: #eef4f7; color: var(--lapis); }
+
+/* ---------- Journey ---------- */
+.journey {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--riverw) minmax(0, 1fr);
+  background: linear-gradient(180deg,
+    var(--snow) 0%, var(--valley) 22%, var(--plain) 48%, var(--parched) 76%, var(--salt) 100%);
+}
+.river {
+  position: absolute; top: 0; left: 0;
+  width: var(--riverw); height: 100%;
+  overflow: visible;
+}
+.stations {
+  grid-column: 2;
+  max-width: 620px;
+  padding-block: 56px max(40vh, 360px);
+  padding-inline: 8px max(18px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column;
+  gap: clamp(150px, 34vh, 340px);
+}
+.legend { font-size: 14px; color: var(--ink-soft); max-width: 46ch; margin-bottom: -60px; }
+
+.station { display: grid; gap: 16px; }
+.where {
+  display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: space-between;
+  font: 500 12px/1.3 var(--mono);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--water-deep);
+  border-top: 2px solid currentColor;
+  padding-top: 10px;
+}
+.station h2 {
+  font: 400 clamp(34px, 4.6vw, 56px)/1.04 var(--display);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.body { display: grid; gap: 14px; }
+.body p { max-width: 62ch; }
+.figures { display: flex; flex-wrap: wrap; gap: 18px 36px; margin-block: 6px; padding: 0; list-style: none; }
+.figures li { display: grid; gap: 2px; max-width: 22ch; }
+.figures b { font: 400 clamp(30px, 3.6vw, 42px)/1.05 var(--display); color: var(--water-deep); font-variant-numeric: tabular-nums; }
+.figures span { font-size: 14px; line-height: 1.4; color: var(--ink-soft); }
+.takes {
+  font: 500 13px/1.5 var(--mono);
+  color: var(--clay);
+  padding-inline-start: 14px;
+  border-inline-start: 2px solid var(--clay);
+}
+.takes.gives { color: var(--water-deep); border-color: var(--water-deep); }
+sup a { font: 500 11px var(--mono); text-decoration: none; color: var(--water-deep); padding: 0 1px; }
+sup a:hover { text-decoration: underline; }
+
+/* the further down, the drier the accents */
+.station:nth-of-type(n+9) .where,
+.station:nth-of-type(n+9) .figures b { color: var(--clay); }
+
+/* river drawing */
+.river .flowline { fill: none; stroke: #fff; stroke-opacity: .42; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 10 30; animation: flow 2.6s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -40; } }
+.river text { font: 500 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; fill: var(--ink); paint-order: stroke; stroke: rgba(255,255,255,.7); stroke-width: 3.5px; stroke-linejoin: round; }
+.river .marker { transition: opacity .3s; }
+
+/* ---------- HUD ---------- */
+.hud {
+  position: fixed; z-index: 5;
+  inset-inline-end: max(14px, env(safe-area-inset-right, 0px));
+  bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+  display: flex; align-items: center; gap: 12px;
+  padding-block: 10px;
+  padding-inline: 12px 16px;
+  background: var(--lapis); color: #eef4f7;
+  border-radius: 6px;
+  box-shadow: 0 8px 26px rgba(10, 25, 45, .28);
+  opacity: 0; transform: translateY(10px); pointer-events: none;
+  transition: opacity .3s, transform .3s;
+  max-width: calc(100vw - 28px);
+}
+.hud.on { opacity: 1; transform: none; }
+.staff { /* a river staff gauge */
+  position: relative; flex: none;
+  width: 14px; height: 46px;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.55) 0 1px, transparent 1px 5.75px),
+    #0b1a33;
+  border: 1px solid rgba(255,255,255,.4);
+}
+.staff i { position: absolute; left: 0; right: 0; bottom: 0; height: 50%; background: var(--turq); opacity: .85; transition: height .25s linear, background .4s; }
+.hud-text { display: grid; gap: 1px; min-width: 0; }
+.hud-text b { font: 400 19px/1.15 var(--display); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hud-text > span { font: 400 11.5px/1.3 var(--mono); color: #b9c9d6; font-variant-numeric: tabular-nums; }
+
+/* ---------- After ---------- */
+.after { background: var(--lapis); color: #eef4f7; padding: clamp(64px, 12vh, 130px) var(--gutter); }
+.after-inner, .sources-inner { max-width: 1040px; margin: 0 auto; display: grid; gap: 28px; }
+.after .eyebrow { color: var(--turq); }
+.after h2 { font: 400 clamp(36px, 5.4vw, 68px)/1.03 var(--display); max-width: 16ch; text-wrap: balance; }
+.solutions { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px 44px; }
+.solutions article { display: grid; gap: 8px; align-content: start; border-top: 1px solid rgba(255,255,255,.25); padding-top: 14px; }
+.solutions h3 { margin: 0; font: 400 26px/1.15 var(--display); color: var(--turq); }
+.solutions p { color: #cfdbe4; font-size: 16px; }
+.closing { font: 400 clamp(22px, 2.4vw, 30px)/1.3 var(--display); max-width: 34ch; color: #eef4f7; }
+
+.sources { background: #0d1f3b; color: #b9c9d6; padding: 56px var(--gutter) 90px; font-size: 14.5px; }
+.sources h2 { font: 400 28px/1.2 var(--display); color: #eef4f7; }
+.sources ol { padding-inline-start: 22px; display: grid; gap: 8px; max-width: 80ch; }
+.sources a { color: #dfeaf1; overflow-wrap: anywhere; }
+.fine { max-width: 70ch; font-size: 13px; color: #8fa5b6; }
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .stations { padding-inline-start: 4px; }
+  .hud-text b { font-size: 17px; }
+}
+/* ---------- Language toggle ---------- */
+.lang-toggle {
+  position: fixed; z-index: 6;
+  top: calc(14px + env(safe-area-inset-top, 0px));
+  inset-inline-end: max(14px, env(safe-area-inset-right, 0px));
+  padding: 7px 15px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 999px;
+  background: rgba(18, 41, 77, .88);
+  color: #eef4f7;
+  font: 600 14px/1.3 var(--body);
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(10, 25, 45, .22);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  transition: background .2s, color .2s;
+}
+.lang-toggle:hover { background: #eef4f7; color: var(--lapis); }
+.lang-toggle:lang(fa) { font-family: "Vazirmatn", Tahoma, sans-serif; }
+.lang-toggle:lang(en) { font-family: "Figtree", "Segoe UI", system-ui, sans-serif; }
+
+/* ---------- Persian / right-to-left ---------- */
+[dir="rtl"] .river { left: auto; right: 0; }
+[dir="rtl"] .fa-title { text-align: right; }
+html:lang(fa) {
+  --display: "Noto Naskh Arabic", "Vazirmatn", Tahoma, serif;
+  --body: "Vazirmatn", Tahoma, system-ui, sans-serif;
+  --mono: "Vazirmatn", Tahoma, sans-serif;
+}
+/* letter-spacing breaks the joins of Persian script; uppercase means nothing there */
+html:lang(fa) body * { letter-spacing: 0 !important; text-transform: none !important; }
+html:lang(fa) body { line-height: 1.95; }
+html:lang(fa) .hero h1 { line-height: 1.35; max-width: 16ch; font-weight: 600; }
+html:lang(fa) .station h2, html:lang(fa) .after h2 { line-height: 1.4; font-weight: 600; }
+html:lang(fa) .solutions h3 { line-height: 1.5; font-weight: 600; font-size: 23px; }
+html:lang(fa) .eyebrow, html:lang(fa) .where, html:lang(fa) .hero-facts dt { font-size: 13.5px; }
+html:lang(fa) .takes { font-size: 14px; line-height: 1.8; }
+html:lang(fa) .hero-facts dd { font-size: clamp(21px, 2.2vw, 27px); line-height: 1.5; }
+html:lang(fa) .hud-text b { font-size: 17px; line-height: 1.5; }
+html:lang(fa) .hud-text > span { font-size: 12px; }
+html:lang(fa) .river text { font-size: 12px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .river .flowline { animation: none; }
+  .hud, .staff i { transition: none; }
+}

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zayandeh Rud: following a river that no longer arrives</title>
+<meta name="description" content="A scroll journey down Iran's Zayandeh Rud, from the Zagros snow to the dried Gavkhouni wetland, showing where the water goes and what its loss costs.">
+<meta property="og:title" content="Zayandeh Rud: following a river that no longer arrives">
+<meta property="og:description" content="Travel the river from source to wetland and see, stop by stop, why it runs dry.">
+<meta property="og:type" content="article">
+<script>
+  // Set language and direction before first paint to avoid a layout flip.
+  (function () {
+    var l = new URLSearchParams(location.search).get('lang');
+    try { l = l || localStorage.getItem('lang'); } catch (e) {}
+    if (!l && /^fa\b/i.test(navigator.language || '')) l = 'fa';
+    if (l === 'fa') { document.documentElement.lang = 'fa'; document.documentElement.dir = 'rtl'; }
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@500&family=Noto+Naskh+Arabic:wght@500;600&family=Vazirmatn:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<button class="lang-toggle" id="lang-toggle" type="button"></button>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow" data-i18n="hero.eyebrow">Isfahan · Central Iran</p>
+    <p class="fa-title" lang="fa" dir="rtl">زاینده‌رود</p>
+    <h1 data-i18n="hero.h1">The life-giving river that no longer arrives</h1>
+    <p class="lede" data-i18n="hero.lede">Zayandeh Rud rises in the snow of the Zagros and once crossed the central plateau to the Gavkhouni wetland in the east. Today the bed beneath Isfahan's historic bridges is dry for most of the year. Follow the water downstream and see where it goes.</p>
+    <dl class="hero-facts" id="hero-facts">
+      <div><dt data-i18n="fact.length">Length</dt><dd data-i18n="fact.length.v">≈ 400 km</dd></div>
+      <div><dt data-i18n="fact.basin">Basin</dt><dd data-i18n="fact.basin.v">41,500 km²</dd></div>
+      <div><dt data-i18n="fact.end">Ends in</dt><dd data-i18n="fact.end.v">Gavkhouni wetland</dd></div>
+    </dl>
+    <a class="start" href="#journey" data-i18n="hero.start">Start at the source <span aria-hidden="true">↓</span></a>
+  </div>
+</header>
+
+<main>
+<div class="journey" id="journey">
+  <svg class="river" aria-hidden="true" focusable="false"></svg>
+
+  <div class="stations">
+
+    <p class="legend" data-i18n="legend">The blue band beside the text shows roughly how much of the river is left at each stop. It is an illustration of the story, not a gauge reading.</p>
+
+    <section class="station" data-name="Zard-Kuh headwaters" data-fa-name="سرچشمه‌های زردکوه" data-elev="2400" data-flow="0.5">
+      <p class="where"><span data-i18n="s1.where">Zard-Kuh headwaters</span><span data-i18n="s1.elev">≈ 2,400 m</span></p>
+      <h2 data-i18n="s1.h">The snow that feeds it is thinning</h2>
+      <div class="body">
+        <p data-i18n="s1.p1">The river begins on the eastern flank of Zard-Kuh, a 4,221 m massif in the Bakhtiari Zagros. Almost everything it carries arrives as winter snow and melts out through spring.</p>
+        <p data-i18n="s1.p2">That store is shrinking. The plateau is warming, more of the precipitation falls as rain, and a run of drought years has left the headwaters with less snow to release each summer. The river starts its journey with less than it used to, before anyone has taken a drop.</p>
+        <p class="takes" data-i18n="s1.takes">Less snow, earlier melt, longer dry season.</p>
+      </div>
+    </section>
+
+    <section class="station" data-name="Kuhrang tunnels" data-fa-name="تونل‌های کوهرنگ" data-elev="2300" data-flow="1" data-divert="left" data-divert-label="from the Karun basin" data-fa-divert-label="از حوضه‌ی کارون">
+      <p class="where"><span data-i18n="s2.where">Kuhrang tunnels</span><span data-i18n="s2.elev">≈ 2,300 m</span></p>
+      <h2 data-i18n="s2.h">Water brought across the mountain</h2>
+      <div class="body">
+        <p data-i18n="s2.p1">People have looked to the water on the other side of this mountain for four hundred years. Safavid engineers tried to cut through to the Kuhrang river and gave up. In 1953 the first Kuhrang tunnel finished the job, and the Zayandeh Rud began receiving water that naturally flows west to the Karun and the Persian Gulf.</p>
+        <p data-i18n="s2.p2">A second tunnel followed in the 1980s, then Cheshmeh Langan in the 2000s, and a third Kuhrang tunnel that has been decades in the making. Each one was meant to end the shortage. Each one was followed by new farms, factories and towns that used up the extra, and left the basin short again at a higher level of demand.</p>
+        <p data-i18n="s2.p3">The neighbours object. Chaharmahal and Bakhtiari and Khuzestan see their own water crossing the watershed, and every new transfer plan, Behesht Abad above all, sets province against province.</p>
+        <p class="takes gives" data-i18n="s2.takes">Adds water here. Adds dependence and conflict everywhere else.</p>
+      </div>
+    </section>
+
+    <section class="station" data-name="Zayandeh Rud Dam, Chadegan" data-fa-name="سد زاینده‌رود، چادگان" data-elev="2060" data-flow="0.92" data-dam="Zayandeh Rud Dam" data-fa-dam="سد زاینده‌رود">
+      <p class="where"><span data-i18n="s3.where">Zayandeh Rud Dam, Chadegan</span><span data-i18n="s3.elev">≈ 2,060 m</span></p>
+      <h2 data-i18n="s3.h">From here on, a valve decides</h2>
+      <div class="body">
+        <p data-i18n="s3.p1">At Chadegan the river meets a 100 m concrete arch. Since 1970 the Zayandeh Rud Dam has stored the spring melt and released it on a schedule, and from this point the river stops being a river in the ordinary sense. It flows when the gates open.</p>
+        <p data-i18n="s3.p2">The reservoir was built to hold about 1.4 billion cubic metres. In recent drought years it has sat at a small fraction of that, and what is released is reserved for drinking water first. In those years there is nothing left to send down the channel. In November 2026, even after the first autumn rains had lifted the inflow more than fivefold, it held about 164 million, roughly a ninth of capacity, and no reopening of the river for farmers had been announced.</p>
+        <p class="takes" data-i18n="s3.takes">Flow becomes a decision made in the capital, before it reaches anyone who needs it.</p>
+      </div>
+    </section>
+
+    <section class="station" data-name="Ben–Borujen intake" data-fa-name="آبگیر بن–بروجن" data-elev="2000" data-flow="0.86" data-divert="left" data-divert-label="to Ben and Borujen" data-fa-divert-label="به بن و بروجن">
+      <p class="where"><span data-i18n="bb.where">Ben–Borujen intake</span><span data-i18n="bb.elev">≈ 2,000 m</span></p>
+      <h2 data-i18n="bb.h">A pipe over the ridge to Ben and Borujen</h2>
+      <div class="body">
+        <p data-i18n="bb.p1">Just below the dam, pumps running on subsidised electricity lift water out of the river in two stages to a treatment plant on the heights near Yan-Cheshmeh in Saman county. From there it runs downhill through 128 km of steel pipe to 11 towns and 14 villages between Ben and Borujen in Chaharmahal and Bakhtiari, most of them in the Karun basin rather than the Zayandeh Rud's.</p>
+        <p data-i18n="bb.p2">The regional water company describes it as drinking and industrial supply: about 41 million cubic metres a year for more than 475,000 people, through a line sized for up to 1,800 litres a second. Work began around 2011, and after more than a decade and over 2,500 billion tomans the line was opened in November 2023.</p>
+        <p data-i18n="bb.p3">Isfahan opposed it the whole way. Its farmers, MPs and officials argued that the Supreme Water Council had banned any new claim on the river, and that a basin unable to deliver its farmers' rights or the wetland's share has nothing to give a new user. Chaharmahal and Bakhtiari replies that it is where the river rises, yet draws more than 90 per cent of its own water from wells, and that the volume is small next to the river's flow.</p>
+        <p class="takes" data-i18n="bb.takes">Small by volume, large in politics: every new claim draws on the same empty account.</p>
+      </div>
+    </section>
+
+    <section class="station" data-name="Upstream orchards" data-fa-name="باغ‌های بالادست" data-elev="1850" data-flow="0.72" data-divert="right" data-divert-label="pumps and new orchards" data-fa-divert-label="پمپ‌ها و باغ‌های تازه">
+      <p class="where"><span data-i18n="s4.where">Upstream valleys</span><span data-i18n="s4.elev">≈ 1,850 m</span></p>
+      <h2 data-i18n="s4.h">Pumps climb the valley sides</h2>
+      <div class="body">
+        <p data-i18n="s4.p1">Below the dam the valley narrows through Saman and the western districts. Over the past few decades orchards have spread up slopes that the river never watered on its own, fed by pumps set directly in the channel and by wells drilled beside it.</p>
+        <p data-i18n="s4.p2">Much of this was never part of any allocation. Each pump is small. Thousands of them along the upper reach take water before it is ever counted, and downstream users blame them for a large share of what goes missing.</p>
+        <p class="takes" data-i18n="s4.takes">Withdrawals nobody planned and few can measure.</p>
+      </div>
+    </section>
+
+    <section class="station" data-name="Lenjan farmland" data-fa-name="کشتزارهای لنجان" data-elev="1700" data-flow="0.45" data-divert="left" data-divert-label="irrigation canals" data-fa-divert-label="کانال‌های آبیاری">
+      <p class="where"><span data-i18n="s5.where">Lenjan plain</span><span data-i18n="s5.elev">≈ 1,700 m</span></p>
+      <h2 data-i18n="s5.h">Thirsty crops that never changed</h2>
+      <div class="body">
+        <p data-i18n="s5.p1">On the Lenjan plain the old canals, the <i>maadi</i>, branch off toward fields that have been farmed for centuries. Farming is by far the largest user of water in the basin, taking well over half of everything withdrawn.</p>
+        <p data-i18n="s5.p2">The crops have not changed with the supply. Rice is still grown here in flooded paddies, and much of the irrigation is by open furrow. Groundwater fills the gap when the river fails, which lowers the water table and pulls still more water out of the riverbed.</p>
+        <p class="takes" data-i18n="s5.takes">The biggest share of the river goes to the fields.</p>
+      </div>
+    </section>
+
+    <section class="station" data-name="Steel and industry" data-fa-name="فولاد و صنعت" data-elev="1670" data-flow="0.33" data-divert="right" data-divert-label="steel, refinery, power" data-fa-divert-label="فولاد، پالایشگاه، نیروگاه">
+      <p class="where"><span data-i18n="s6.where">Mobarakeh and Zob Ahan</span><span data-i18n="s6.elev">≈ 1,670 m</span></p>
+      <h2 data-i18n="s6.h">Steel mills that drink from the river</h2>
+      <div class="body">
+        <p data-i18n="s6.p1">Two of Iran's largest steelworks stand on this stretch: Zob Ahan, the Isfahan Steel Company built in the 1960s, and Mobarakeh Steel, the biggest steelmaker in the country. A refinery, petrochemical plants and power stations cluster around them.</p>
+        <p data-i18n="s6.p2">They were sited here for politics and jobs, on a low-rainfall plateau with no other river to draw on, and they need water every hour of the year. Industry takes a smaller share than farming, but its allocation is guaranteed on grounds of national need, a privilege the river itself does not have. The same industrial belt is a main source of the air and soil pollution that Isfahan lives with.</p>
+        <p class="takes" data-i18n="s6.takes">A fixed, year-round claim on a river that is already over-drawn. Industry says it now meets its needs from seawater and treated wastewater, but that claim still needs independent checking.</p>
+      </div>
+    </section>
+
+    <section class="station" data-name="Pipelines out" data-fa-name="خطوط انتقال" data-elev="1620" data-flow="0.18" data-divert="left" data-divert-label="to Yazd and Kashan" data-fa-divert-label="به یزد و کاشان">
+      <p class="where"><span data-i18n="s7.where">Intakes above Isfahan</span><span data-i18n="s7.elev">≈ 1,620 m</span></p>
+      <h2 data-i18n="s7.h">Water leaves the basin by pipe</h2>
+      <div class="body">
+        <p data-i18n="s7.p1">Just above the city, pipelines carry Zayandeh Rud water out of the valley altogether: east to Yazd, north to Kashan, and to towns across the province. Several million people now drink from this river, far more than live along its banks.</p>
+        <p data-i18n="s7.p2">Drinking water has first priority, so in a dry year these pipes run while the channel beside them is empty. The Yazd line in particular has become a symbol. Farmers downstream have broken it more than once.</p>
+        <p class="takes" data-i18n="s7.takes">Cities hundreds of kilometres away now depend on it.</p>
+      </div>
+    </section>
+
+    <section class="station" data-name="Isfahan" data-fa-name="اصفهان" data-elev="1575" data-flow="0.05" data-bridge="Si-o-se-pol" data-fa-bridge="سی‌وسه‌پل">
+      <p class="where"><span data-i18n="s8.where">Isfahan</span><span data-i18n="s8.elev">≈ 1,575 m</span></p>
+      <h2 data-i18n="s8.h">Bridges over a dry bed, a city sinking</h2>
+      <div class="body">
+        <p data-i18n="s8.p1">This is where the river made a city. Si-o-se-pol crosses it on 33 arches, finished in 1602. Khaju followed in 1650. For four centuries people gathered under those arches to sing over moving water.</p>
+        <p data-i18n="s8.p2">The bed first ran completely dry here in the early 2000s. Since then water has reached Isfahan only for short releases, and for most of the year people walk across cracked mud between the piers. Foundations designed to stay wet are drying and settling.</p>
+        <p data-i18n="s8.p3">The larger damage is under the ground. With no river to recharge it and wells pumping harder, the aquifer is collapsing. Iran's Geological Survey puts the average sinking of the Isfahan plain at 15 to 18 centimetres a year, among the fastest rates measured anywhere. Cracks have opened in houses, roads and the walls of monuments around Naqsh-e Jahan Square.</p>
+        <p class="takes" data-i18n="s8.takes">A dry bed, a falling water table, and ground that does not come back.</p>
+      </div>
+    </section>
+
+    <section class="station" data-name="Eastern Isfahan" data-fa-name="شرق اصفهان" data-elev="1480" data-flow="0.015">
+      <p class="where"><span data-i18n="s9.where">Varzaneh and the eastern farms</span><span data-i18n="s9.elev">≈ 1,480 m</span></p>
+      <h2 data-i18n="s9.h">The farmers at the end of the line</h2>
+      <div class="body">
+        <p data-i18n="s9.p1">East of the city the land flattens toward Gavkhouni. The farmers of Varzaneh and the eastern districts hold some of the oldest water rights on the river, the <i>haqabeh</i>, set down in a scroll attributed to Sheikh Bahai that divided the flow into 33 shares some four hundred years ago.</p>
+        <p data-i18n="s9.p2">Those rights sit at the end of the line, so they are the first to go unmet. Fields have been abandoned and families have left. In 2013 farmers here broke the pipeline to Yazd. In November 2021 they camped in the dry riverbed in Isfahan, thousands of people joined them, and the protest ended with tear gas and birdshot fired into the crowd.</p>
+        <p class="takes" data-i18n="s9.takes">Legal rights to water that never arrives.</p>
+      </div>
+    </section>
+
+    <section class="station last" data-name="Gavkhouni" data-fa-name="گاوخونی" data-elev="1470" data-flow="0" data-wetland="Gavkhouni">
+      <p class="where"><span data-i18n="s10.where">Gavkhouni wetland</span><span data-i18n="s10.elev">≈ 1,470 m</span></p>
+      <h2 data-i18n="s10.h">A wetland turned to salt and dust</h2>
+      <div class="body">
+        <p data-i18n="s10.p1">The river was never meant to reach the sea. It ends in Gavkhouni, a saline wetland at the lowest point of the basin that has been protected under the Ramsar Convention since 1975 and once hosted flamingos, pelicans and great flocks of migrating birds.</p>
+        <p data-i18n="s10.p2">With almost no inflow for years, most of the wetland is now a dry salt pan. The wind lifts its surface. The dust carries salt and whatever the river left behind over decades of farm and factory runoff, and it travels toward Isfahan and the provinces around it.</p>
+        <p data-i18n="s10.p3">What began as snow on Zard-Kuh ends here, as dust laced with salt and heavy metals in the air of the city that the river built.</p>
+        <p class="takes" data-i18n="s10.takes">Nothing left.</p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<section class="after" id="after">
+  <div class="after-inner">
+    <p class="eyebrow" data-i18n="after.eyebrow">Upstream again</p>
+    <h2 data-i18n="after.h">What would bring the river back</h2>
+    <div class="solutions">
+      <article><h3 data-i18n="sol1.h">Count the river as a water user</h3><p data-i18n="sol1.p">Give Gavkhouni and the channel a guaranteed share that is released every year, before new allocations are considered.</p></article>
+      <article><h3 data-i18n="sol2.h">Stop adding demand</h3><p data-i18n="sol2.p">Every transfer so far has been absorbed by growth. No new tunnel helps unless permits for new farms, plants and towns stop first.</p></article>
+      <article><h3 data-i18n="sol3.h">Farm for the water there is</h3><p data-i18n="sol3.p">Shift away from thirsty crops, pay farmers to fallow in dry years, and close the pumps that were never licensed.</p></article>
+      <article><h3 data-i18n="sol4.h">Reuse and relocate</h3><p data-i18n="sol4.p">Move industry onto treated wastewater, and put the thirstiest new plants on the coast, not on the dry central plateau.</p></article>
+      <article><h3 data-i18n="sol5.h">Manage one basin, not rival provinces</h3><p data-i18n="sol5.p">Isfahan, Chaharmahal and Bakhtiari, Yazd and Khuzestan draw on connected water. A single basin authority with public data could divide it openly.</p></article>
+      <article><h3 data-i18n="sol6.h">Let the aquifer recover</h3><p data-i18n="sol6.p">Subsidence is permanent, but it can be slowed. Cap pumping and let the river flow long enough to soak the plain again.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sources">
+  <div class="sources-inner">
+    <h2 data-i18n="sources.h">Sources</h2>
+    <ol id="s-sources">
+      <li><a href="https://en.wikipedia.org/wiki/Zayanderud" target="_blank" rel="noopener" data-i18n="src7.a">Wikipedia, Zayanderud</a><span data-i18n="src7.d">: basin and length, Sheikh Bahai's maadi canals and the 33-share Tomar, agriculture's share of withdrawals, 4.5 million people drinking from the river, Khaju Bridge (1650), Gavkhouni's Ramsar listing (1975).</span></li>
+      <li><a href="https://en.wikipedia.org/wiki/Zard-Kuh" target="_blank" rel="noopener" data-i18n="src8.a">Wikipedia, Zard-Kuh</a><span data-i18n="src8.d">: summit elevation 4,221 m.</span></li>
+      <li><a href="https://www.iwrr.ir/article_191695.html" target="_blank" rel="noopener" data-i18n="src9.a">Hesami, Asakereh & Raeispour, Iran Water Resources Research, 2024</a><span data-i18n="src9.d">: snow cover, snow days and snow water equivalent in the Zayandeh Rud basin declined over 2001–2018.</span></li>
+      <li><a href="https://fa.wikipedia.org/wiki/%D8%AA%D9%88%D9%86%D9%84_%DA%A9%D9%88%D9%87%D8%B1%D9%86%DA%AF" target="_blank" rel="noopener" data-i18n="src10.a">Persian Wikipedia, Kuhrang tunnel</a><span data-i18n="src10.d">: Safavid attempt; first tunnel 1953 (sources differ on the year), second in the 1980s, third under construction since 1998; about 300 and 255 million m³ a year through the first two.</span></li>
+      <li><a href="https://fa.wikipedia.org/wiki/%D8%B3%D8%AF_%D8%B2%D8%A7%DB%8C%D9%86%D8%AF%D9%87%E2%80%8C%D8%B1%D9%88%D8%AF" target="_blank" rel="noopener" data-i18n="src11.a">Persian Wikipedia, Zayandeh Rud Dam</a><span data-i18n="src11.d">: 100 m double-arch dam at Chadegan, in service 1970, reservoir 1,470 million m³.</span></li>
+      <li><a href="https://www.hamshahrionline.ir/news/1083882/" target="_blank" rel="noopener" data-i18n="src5.a">Hamshahri Online, 7 November 2026</a><span data-i18n="src5.d">: dam inflow rises from 7 to 41 m³/s; storage about 164 million m³; no reopening planned.</span></li>
+      <li><a href="https://www.irna.ir/news/81029244/" target="_blank" rel="noopener" data-i18n="src1.a">IRNA, 5 February 2014</a><span data-i18n="src1.d">: Chaharmahal and Bakhtiari regional water company on the Ben–Borujen project: intake below the dam, 41 million m³ a year, 11 towns and 14 villages, 475,000 people.</span></li>
+      <li><a href="https://www.hamshahrionline.ir/news/808121/" target="_blank" rel="noopener" data-i18n="src2.a">Hamshahri Online, 18 November 2023</a><span data-i18n="src2.d">: Ben–Borujen opened after about 15 years; cost over 2,500 billion tomans; work began around 2011.</span></li>
+      <li><a href="https://ensafnews.com/461613/" target="_blank" rel="noopener" data-i18n="src3.a">Ensaf News, 18 November 2023</a><span data-i18n="src3.d">: opened despite opposition: over 40 million m³ a year moved 128 km into the Karun basin.</span></li>
+      <li><a href="https://iag.ir/%D8%A7%D8%AC%D8%B1%D8%A7%DB%8C-%D8%B7%D8%B1%D8%AD-%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84-%D8%A2%D8%A8-%D8%A8%D9%86-%D8%A8%D8%B1%D9%88%D8%AC%D9%86-%DB%8C%DA%A9-%D8%AA%D9%87%D8%AF%DB%8C%D8%AF-%D9%88/" target="_blank" rel="noopener" data-i18n="src4.a">Iranian Geopolitical Association, 12 September 2022</a><span data-i18n="src4.d">: opinion by M. Yousefi Shatouri: 1,800 L/s capacity and the Supreme Water Council ban on new allocations.</span></li>
+      <li><a href="https://snn.ir/fa/news/1322027/" target="_blank" rel="noopener" data-i18n="src12.a">SNN, 24 October 2025 (video)</a><span data-i18n="src12.d">: Isfahan MP Hamed Yazdian: upstream withdrawals happen in both Isfahan and Chaharmahal and Bakhtiari.</span></li>
+      <li><a href="https://donya-e-eqtesad.com/%D8%A8%D8%AE%D8%B4-%D9%88%DB%8C%DA%98%D9%87-%D9%86%D8%A7%D9%85%D9%87-63/4005071-%D8%B1%D9%86%D8%AC-%D8%A8%D8%B1%D9%86%D8%AC" target="_blank" rel="noopener" data-i18n="src13.a">Donya-e-Eqtesad, “The trouble with rice”</a><span data-i18n="src13.d">: rice growing in Lenjan despite official restrictions.</span></li>
+      <li><a href="https://www.mehrnews.com/news/6679326/" target="_blank" rel="noopener" data-i18n="src14.a">Mehr News, 6 December 2025</a><span data-i18n="src14.d">: Mobarakeh Steel's CEO says its draw on the Zayandeh Rud fell to zero once the 800 km Persian Gulf pipeline opened.</span></li>
+      <li><a href="https://tabnak.ir/fa/news/495669/" target="_blank" rel="noopener" data-i18n="src15.a">Tabnak</a><span data-i18n="src15.d">: in early 2013 (Esfand 1391) east Isfahan farmers protesting at the Yazd pipeline clashed with police.</span></li>
+      <li><a href="https://en.wikipedia.org/wiki/Si-o-se-pol" target="_blank" rel="noopener" data-i18n="src16.a">Wikipedia, Si-o-se-pol</a><span data-i18n="src16.d">: built 1599–1602 with 33 spans; the river was dammed upstream for Yazd in the drought years 2000–02 and 2013.</span></li>
+      <li><a href="https://www.irna.ir/news/85926414/" target="_blank" rel="noopener" data-i18n="src6.a">IRNA, 3 September 2025</a><span data-i18n="src6.d">: Isfahan subsidence averages 15–18 cm a year (Geological Survey); viral claims of 6 m in 30 years are not supported.</span></li>
+      <li><a href="https://www.haaretz.com/middle-east-news/iran/2021-11-27/ty-article/water-shortage-protestors-clash-with-iranian-security-forces/0000017f-dbf0-df9c-a17f-fff837e40000" target="_blank" rel="noopener" data-i18n="src17.a">Reuters via Haaretz, 27 November 2021</a><span data-i18n="src17.d">: tear gas and birdshot used against water protesters in the dry riverbed.</span></li>
+      <li><a href="https://link.springer.com/article/10.1007/s13146-014-0187-4" target="_blank" rel="noopener" data-i18n="src18.a">Carbonates and Evaporites, 2014</a><span data-i18n="src18.d">: heavy metals (nickel, lead, cadmium and others) measured in the Gavkhouni salt pan, partly of natural origin.</span></li>
+    </ol>
+    <p class="fine" data-i18n="sources.fine">Figures for a contested river vary between agencies and years. Where sources disagree this page gives a range or the more conservative number. Elevations are rounded.</p>
+  </div>
+</section>
+</main>
+
+<aside class="hud" id="hud" aria-hidden="true">
+  <div class="staff"><i id="hud-fill"></i></div>
+  <div class="hud-text">
+    <b id="hud-name">Zard-Kuh headwaters</b>
+    <span id="hud-meta">2,400 m · 50% of the river left</span>
+  </div>
+</aside>
+
+<script src="i18n.js"></script>
+<script src="river.js"></script>
+</body>
+</html>
