@@ -155,10 +155,30 @@
     'src18.a': 'نشریه Carbonates and Evaporites، ۲۰۱۴',
     'src18.d': ': اندازه‌گیری فلزات سنگین (نیکل، سرب، کادمیوم و دیگر فلزات) در پهنه‌ی نمکی گاوخونی که بخشی از آن منشأ طبیعی دارد.',
 
+    'share.eyebrow': 'به دیگران بگویید',
+    'share.h': 'بگویید آب رود کجا رفت',
+    'share.p': 'بسیاری از کسانی که از پل‌های اصفهان می‌گذرند، نمی‌دانند چرا بستر زیر پایشان خشک است. این سفر را برای کسی بفرستید که باید بداند.',
+    'share.native': 'هم‌رسانی…',
+    'share.telegram': 'تلگرام',
+    'share.whatsapp': 'واتس‌اپ',
+    'share.x': 'ایکس',
+    'share.facebook': 'فیسبوک',
+    'share.linkedin': 'لینکدین',
+    'share.email': 'ایمیل',
+    'share.copy': 'کپی پیوند',
+    'share.text': 'زاینده‌رود: مسیر رود اصفهان را از برف زاگرس تا گاوخونی دنبال کنید و ببینید آب کجا می‌رود.',
+    'share.copied': 'پیوند کپی شد.',
+    'share.copyfail': 'کپی انجام نشد. پیوند را از نوار نشانی مرورگر کپی کنید.',
+
     'river.wetland': 'شوره‌زار گاوخونی',
   };
 
-  const EN_EXTRA = { 'river.wetland': 'Gavkhouni salt pan' };
+  const EN_EXTRA = {
+    'river.wetland': 'Gavkhouni salt pan',
+    'share.text': 'Zayandeh Rud: follow Isfahan\'s river from the Zagros snow to Gavkhouni and see where its water goes.',
+    'share.copied': 'Link copied.',
+    'share.copyfail': 'Could not copy. Select the address bar and copy the link from there.',
+  };
 
   const root = document.documentElement;
   const nodes = [...document.querySelectorAll('[data-i18n]')];

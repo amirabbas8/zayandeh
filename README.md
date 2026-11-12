@@ -8,6 +8,7 @@ Plain static site, no build step:
 - `styles.css` – design
 - `river.js` – draws the river beside the text; its width follows each stop's `data-flow` value (0–1)
 - `i18n.js` – the Persian translation and the English / فارسی toggle
+- `share.js` – the share section: Telegram, WhatsApp, X, Facebook, LinkedIn, email, the device's share sheet and copy link. The shared link keeps the reader's language (`?lang=`)
 
 ## Preview locally
 
